@@ -8,10 +8,9 @@ body {
 
 #obal {
   /* Maxim�ln� ���ka 960 px */
-  max-height: 960px;
+  max-width: 960px;
   /* Nastav okraje tak, aby byl blok obal na str�nce vycentrov�n */
-  margin-right: 200px;
-  margin-left: 200px;
+  margin:auto;
   /* Ohrani�en� - pln� �ed� ��ra o tlou��ce 1 pixel  */
   border: solid 1px;
   /* Vnit�n� odsazen� - 20 pixel� */
@@ -19,7 +18,7 @@ body {
   /* B�l� barva pozad� */
   background-color: white;
   /* Barva textu - tmav� �ed� odst�n, �estn�ctkov� hodnoty 3 */
-
+color: grey;
 }
 
 nav {
@@ -34,6 +33,7 @@ nav {
 /* Pro v�echny odkazy v bloku navigace */nav a {
   padding: 19px;
   /* Odkazy nebudou podtr�eny */
+  text-decoration: none;
   color: lightgray;
 }
 
@@ -46,10 +46,16 @@ h1 {
   /* Nadpis bude vycentrov�n */
   text-align: center;
   /* Velikost nadpisu bude dvojn�sobn� vzhledem k z�kladn� velikosti p�sma */
+  text-size-adjust: 200%;
   /* Nadpis bude tu�n� */
+  font-weight: bold;
   /* Barva nadpisu bude toto�n� s barvou zv�razn�n�ho odkazu */
+  color: rgb(0,153,204);
   /* Nadpis bude vyps�n velk�mi p�smeny */
+  text-transform: uppercase;
   /* V��ka ��dku nadpisu bude 2em */
+  line-height: 2em;
+  
 }
 
 /* Plat� pro nadpisy h2 i h3 */ h2, h3 {
@@ -65,11 +71,14 @@ h2 {
 h3 { 
   font-size: 1.2em;
   /* Nadpisy budou podtr�eny tenkou te�kovanou �arou, jej� barva bude shodn� s barvou p�sma */ 
+  
+  
 }
 
 p, li {
   line-height: 1.5em;
   /* Horn� a spodn� okraj odstavc� i odr�ek budou odsazeny o hodnotu 1em */
+  margin: 1em;
 }
 
 p {
@@ -79,18 +88,30 @@ p {
 
 li {
   /* Nastavte styl odr�ek tak, aby odpov�dal p�edloze (�tvercov� odr�ka) */
+  list-style-type: square;
   list-style-position: outside;
   margin-left: 20px;
 }
 
 /* Nastavte pravidlo pro v�echny tu�n� a mod�e zv�razn�n� texty v odr�k�ch. */
+ul bold{
+  color: aqua;
+  font-weight: bold;
+}
 
 /* Nastavte pravidlo pro v�echny odstavce-pozn�mky: 
+
     * na lev�m okraji bude �ed� ohrani�en� 10px siln�
     * text bude zleva odsazen o 50 pixel�
     * pou�it� font bude o 10% men�� ne� z�kladn� p�smo
     * p�smo bude naklon�n� (kurz�va)
 */
+ .poznamka {
+  border-left: 10px solid grey;
+  padding-left: 50px;
+  font-size: 90%;
+  font-style: italic;
+}
 
 footer {
   color: gray;
@@ -106,4 +127,12 @@ strong {
 
 /* Nastavte pravidla pro zna�ky vlo�en� do textu �vodn�ho odstavce,
    aby kone�n� vzheld textu odpov�dal p�edloze. */
+   abbr{
+     text-decoration-color: red
+   }
+   mark{
+     background-color: green;
+     color: white;
+   }
+
 
